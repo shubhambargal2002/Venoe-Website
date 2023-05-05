@@ -1,0 +1,58 @@
+{
+  "name": "venoe",
+  "author": "shubham shubhambargal2002@gmail.com",
+  "description": "venoe website",
+  "license": "ISC",
+  "scripts": {
+    "dev:app": "cross-env ATRI_APP_API_ENDPOINT=http://localhost:4007 dev-atri-app -d \"#@atrilabs/react-component-manifests\" -a \"@atrilabs/utils:@atrilabs/atri-app-core/src/components/Link\" -i \"@atrilabs/utils:@atrilabs/atri-app-core\"",
+    "dev:pyapp": "dev-py-app",
+    "editor": "cross-env APP_HOSTNAME=\"http://localhost:3000\" dev-atri-editor",
+    "dev": "concurrently \"npm run dev:app\" \"npm run editor\" \"npm run dev:pyapp\"",
+    "build:pyapp": "gen-py-app",
+    "build:pyclasses": "gen-py-classes -i \"@atrilabs/utils\" -a \"@atrilabs/utils\"",
+    "build:app": "cross-env NODE_ENV=production BABEL_ENV=production build-atri-app -d \"#@atrilabs/react-component-manifests\"",
+    "build": "npm run build:pyclasses && npm run build:pyapp && npm run build:app",
+    "serve": "serve"
+  },
+  "dependencies": {
+    "@atrilabs/atri-app-core": "^1.0.0-alpha.31",
+    "@atrilabs/canvas-zone": "^1.0.0-alpha.31",
+    "@atrilabs/commands": "^1.0.0-alpha.31",
+    "@atrilabs/commands-builder": "^1.0.0-alpha.31",
+    "@atrilabs/core": "^1.0.0-alpha.31",
+    "@atrilabs/design-system": "^1.0.0-alpha.31",
+    "@atrilabs/pwa-builder": "^1.0.0-alpha.31",
+    "@atrilabs/pwa-builder-server": "^1.0.0-alpha.31",
+    "@atrilabs/react-component-manifests": "^1.0.0-alpha.31",
+    "@atrilabs/utils": "^1.0.0-alpha.31",
+    "cross-env": "^7.0.3",
+    "framer-motion": "^10.12.7",
+    "node-noop": "^1.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "xstate": "^4.35.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.192",
+    "@types/uuid": "^9.0.1",
+    "concurrently": "^7.6.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "atriConfig": {
+    "id": "9b741f7e-a907-40c7-9a5f-1bd696c06a4f",
+    "pythonPackageName": "manifests"
+  }
+}
