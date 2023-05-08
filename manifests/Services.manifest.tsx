@@ -1,11 +1,10 @@
 import { createComponentManifest } from "@atrilabs/utils";
 
 export default createComponentManifest({
-	name: "FramerFlex",
-	acceptsChild: "flex",
-    styles:{
+	name: "Services",
+    styles : {
         boxShadowOptions: true,
-        flexContainerOptions: true,
+        flexContainerOptions: false,
         flexChildOptions: true,
         positionOptions: true,
         typographyOptions: true,
@@ -15,15 +14,8 @@ export default createComponentManifest({
         outlineOptions: true,
         backgroundOptions: true,
         miscellaneousOptions: true,
-    },
+      },
 
 	custom: {
-        duration: { type: "number" },
-        delay: { type: "number" }
-	},
-
-	initalCustomValues: {
-        duration: 1,
-        delay: 0
 	},
 });

@@ -16,12 +16,6 @@ export const NavFlex = forwardRef<
 >((props, ref) => {
 
     const variants={
-        initial:{
-
-        },
-        animate:{
-
-        },
         whileHover:{
             color: props.custom.hoverColor,
             x: props.custom.x,
@@ -37,8 +31,6 @@ export const NavFlex = forwardRef<
       style={{ ...props.styles, display: "flex", position: "relative" }}
       className={props.className}
       variants={variants}
-      initial="initial"
-      animate="animate"
       whileHover="whileHover"
     >
       {props.children}

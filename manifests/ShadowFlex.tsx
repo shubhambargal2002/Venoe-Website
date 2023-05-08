@@ -21,17 +21,10 @@ export const ShadowFlex = forwardRef<
 >((props, ref) => {
 
     const variants={
-        initial:{
-
-        },
-        animate:{
-
-        },
         whileHover:{
             color: props.custom.hoverColor,
             backgroundColor: props.custom.hoverBackgroundColor,
-            boxShadow: `8px 8px 0px 0px #000000`,
-            // boxShadow: `${props.custom.hoverHShadow}px ${props.custom.hoverVShadow}px ${props.custom.hoverBlurRadius}px ${props.custom.hoverSpreadRadius}px ${props.custom.hoverShadowColor}`,
+            boxShadow: `${props.custom.hoverHShadow}px ${props.custom.hoverVShadow}px ${props.custom.hoverBlurRadius}px ${props.custom.hoverSpreadRadius}px ${props.custom.hoverShadowColor}`,
             transition:{
                 duration: props.custom.duration,
             }
@@ -44,8 +37,6 @@ export const ShadowFlex = forwardRef<
       style={{ ...props.styles, display: "flex", position: "relative" }}
       className={props.className}
       variants={variants}
-      initial="initial"
-      animate="animate"
       whileHover="whileHover"
     >
       {props.children}
