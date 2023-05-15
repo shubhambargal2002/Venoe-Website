@@ -11,7 +11,6 @@ const DropdownMenu = React.forwardRef<
 			src?: string;
 			iconWidth?: number;
 			iconHeight?: number;
-            text?: string;
 		};
 		id?: string;
 	}
@@ -34,21 +33,20 @@ const DropdownMenu = React.forwardRef<
 			}}
 			onClick={onClickCb}
 		>
-            <div style={{display:"flex", flexDirection:"row",columnGap:"20px"}}>
-                <div>{props.custom.text}</div>
-				<div>{props.custom.src ? (
-					<img
-						src={props.custom.src}
-						height={props.custom.iconHeight}
-						width={props.custom.iconWidth}
-					></img>
-				) : (
-					<Icon />
-				)}</div>
-            </div>
+			{props.custom.src ? (
+				<img
+					src={props.custom.src}
+					height={props.custom.iconHeight}
+					width={props.custom.iconWidth}
+				></img>
+			) : (
+				<Icon />
+			)}
 			<div
 				style={{
-					position: "absolute"
+					position: "absolute",
+					top: "2em",
+					right: "0",
 				}}
 			>
 				{open ? props.children : null}

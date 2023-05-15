@@ -12,6 +12,7 @@ export const NavFlex = forwardRef<
         hoverColor?: string
     };
     className?: string;
+    id?: string;
   }
 >((props, ref) => {
 
@@ -29,6 +30,7 @@ export const NavFlex = forwardRef<
     <motion.div
       ref={ref}
       style={{ ...props.styles, display: "flex", position: "relative" }}
+      id={props.id}
       className={props.className}
       variants={variants}
       whileHover="whileHover"

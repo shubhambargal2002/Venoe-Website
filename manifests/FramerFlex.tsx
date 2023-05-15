@@ -11,6 +11,7 @@ export const FramerFlex = forwardRef<
 			delay?: number;
 		};
 		className?: string;
+		id?: string;
 	}
 >((props, ref) => {
 	const internalRef = useRef<HTMLDivElement>(null);
@@ -27,6 +28,7 @@ export const FramerFlex = forwardRef<
 				transform: inView ? `scale(1)` : `scale(0)`,
 				transition: `all ${props.custom.duration}s cubic-bezier(0.17, 0.55, 0.55, 1) ${props.custom.delay}s`,
 			}}
+			id={props.id}
 			className={props.className}
 		>
 			{props.children}

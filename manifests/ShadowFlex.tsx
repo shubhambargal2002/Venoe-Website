@@ -17,6 +17,7 @@ export const ShadowFlex = forwardRef<
         hoverBackgroundColor?: string
     };
     className?: string;
+    id?: string;
   }
 >((props, ref) => {
 
@@ -35,6 +36,7 @@ export const ShadowFlex = forwardRef<
     <motion.div
       ref={ref}
       style={{ ...props.styles, display: "flex", position: "relative" }}
+      id={props.id}
       className={props.className}
       variants={variants}
       whileHover="whileHover"
