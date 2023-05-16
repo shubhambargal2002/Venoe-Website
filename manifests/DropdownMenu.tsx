@@ -45,8 +45,9 @@ const DropdownMenu = React.forwardRef<
 			<div
 				style={{
 					position: "absolute",
-					top: "2em",
+					top: "4em",
 					right: "0",
+					zIndex: 1
 				}}
 			>
 				{open ? props.children : null}

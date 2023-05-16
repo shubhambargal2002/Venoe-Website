@@ -34,7 +34,7 @@ const DropdownMenu = React.forwardRef<
 			}}
 			onClick={onClickCb}
 		>
-            <div style={{display:"flex", flexDirection:"row",columnGap:"20px"}}>
+            <div style={{...props.styles, display:"flex", flexDirection:"row",columnGap:"10px", alignItems:"center", cursor:"pointer"}}>
                 <div>{props.custom.text}</div>
 				<div>{props.custom.src ? (
 					<img
@@ -48,7 +48,10 @@ const DropdownMenu = React.forwardRef<
             </div>
 			<div
 				style={{
-					position: "absolute"
+					position: "absolute",
+					top: "4em",
+					right: "0",
+					zIndex: 1
 				}}
 			>
 				{open ? props.children : null}
