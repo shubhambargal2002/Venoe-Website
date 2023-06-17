@@ -52906,5 +52906,27 @@
       }
     },
     "id": "35962c21-610e-4959-b77c-721afc0ac0b2"
+  },
+  {
+    "type": "PATCH$$@atrilabs/app-design-forest/src/cssTree",
+    "slice": {
+      "property": {
+        "styles": {
+          "transform": "(none)"
+        }
+      }
+    },
+    "id": "37e54fa3-c10b-4b68-89f7-6c9ea2c3cd24"
+  },
+  {
+    "type": "PATCH$$@atrilabs/app-design-forest/src/cssTree",
+    "slice": {
+      "property": {
+        "styles": {
+          "transform": ""
+        }
+      }
+    },
+    "id": "37e54fa3-c10b-4b68-89f7-6c9ea2c3cd24"
   }
 ]
